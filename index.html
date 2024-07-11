@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IYAPPAA FOOD INDUSTRY</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <main>
+        <header>
+            <div class="logo">
+                <a href="#">IYAPPAA FOOD INDUSTRY</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li class="product-menu">
+                        <a href="#">Product</a>
+                        <ul class="submenu">
+                            <li><a href="#">Sweets</a></li>
+                            <li><a href="#">Snacks</a></li>
+                            <li><a href="#">Oil</a></li>
+                            <li><a href="#">Grocery</a></li>
+                            <li><a href="#">Herbal Products</a></li>
+                            <li><a href="#">Rice</a></li>
+                            <li><a href="#">Home Appliances</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Store</a></li>
+                    <li><a href="#">Review</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </header>
+        <section class="hero_sec">
+            <img src="./jackfruit.jpg" alt="Jackfruit">
+        </section>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('header nav ul');
+            const productMenu = document.querySelector('.product-menu');
+            const submenu = document.querySelector('.submenu');
+
+            hamburger.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+            });
+
+            productMenu.addEventListener('click', function(event) {
+                if (window.innerWidth <= 400) {
+                    event.preventDefault();
+                    submenu.classList.toggle('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
